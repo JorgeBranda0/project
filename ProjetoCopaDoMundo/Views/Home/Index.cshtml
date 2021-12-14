@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Mundovix";
 }
 
@@ -6,50 +6,163 @@
     <h1 class="display-4">COPA DO MUNDO 🏆</h1>
     <p>Simulação de eliminatórias da Copa do Mundo</p>
 </div>
-     <p> Escolha os países que iram participar: </p>
+     <h6> Escolha os países que iram participar: </h6>
 
-     <script>
-         var pais1 = "FRANÇA";
-         var pais2 = "DINAMARCA";
-         var pais3 = "INGLATERRA";
-         var pais4 = "ARGENTINA";
-         var resultado = "França x Dinamarca"
+     <button onclick="funcao1()">FRANÇA</button>
+        <p id="demo1"></p>
 
-          if (pais1 === pais2){
-                   console.log(resultado);
-                }
-     </script>
+     <button onclick="funcao2()">BRASIL</button>
+        <p id="demo2"></p>
 
-    <body>
-        <h6 id=demo1></h6>
-        <button onclick="myFunction1()">FRANÇA</button>
+        <p id="quadro2"></p>
 
-        <h6 id=demo2></h6>
-        <button onclick="myFunction2()">DINAMARCA</button>
-
-        <h6></h6>
-
-        
             <script>
-                 
-                function myFunction1(){
-                    document.getElementById("demo1").innerHTML = "França selecionada";
+                function funcao1()
+                {
+                    var x;
+                    var r = confirm("Deseja selecionar a França para as eliminatórias?");
+                    if (r == true)
+                    {
+                        x = "Convocado para semi-final!";
+                    }
+                    else
+                    {
+                        x = "Você pressionou CANCELAR!";
+                    }
+                    document.getElementById("demo1").innerHTML = x;
                 }
-                function myFunction2(){
-                    document.getElementById("demo2").innerHTML = "Dinamarca selecionada";
+                function funcao2()
+                {
+                    var x;
+                    var r = confirm("Deseja selecionar o Brasil para as eliminatórias?");
+                    if (r == true)
+                    {
+                        x = "Convocado para semi-final!";
+                    }
+                    else
+                    {
+                        x = "Você pressionou CANCELAR!";
+                    }
+                    document.getElementById("demo2").innerHTML = x;
+                }   
+
+            </script>
+           
+            <h6> Quadro º1 - SEMI-FINAL</h6>
+
+             <button onclick="quadro1()">Clique para ver o º1 Quadro</button>
+                <p id="demoQuadro"></p>
+            
+            <script>
+                function quadro1()
+                {
+                    var dupla1 = "FRANÇA x BRASIL";
+                    document.getElementById("demoQuadro").innerHTML = dupla1;
                 }
+            </script>
 
-                //function myFunction3(){
-                //  document.getElementById("demo3").innerHTML = "França x Dinamarca"
-                //}
+             <button onclick="final()">Clique para ver o finalista</button>
+                <p id="demofinal1"></p>
 
-                
+                <script>
+                    function final()
+                    {
+                        var passa = "França vence o Brasil por 2x1 e é classificada para a final.";
+                        document.getElementById("demofinal1").innerHTML = passa;
+                    }
+                </script>
 
-           </script>
- 
+                <h6> Escolha os países que iram participar: </h6>
+             
+                     <button onclick="funcao3()">INGLATERRA</button>
+                        <p id="demo3"></p>
 
-   </body>
-       
-      
-     
-        
+                     <button onclick="funcao4()">ESPANHA</button>
+                         <p id="demo4"></p>
+
+                         <script>
+                             function funcao3() 
+                             {
+                                  var x;
+                                  var r = confirm("Deseja selecionar a Inglaterra para as eliminatórias?");
+                                  if (r == true)
+                                  {
+                                    x = "Convocado para semi-final!";
+                                  }
+                                  else
+                                  {
+                                    x = "Você pressionou CANCELAR!";
+                                  }   
+                                     document.getElementById("demo3").innerHTML = x;
+                             }
+                             function funcao4()
+                             {
+                                 var x;
+                                 var r = confirm("Deseja selecionar a Espanha para as eliminatórias?")
+                                 if (r == true)
+                                 {
+                                     x = "Convocado para semi-final!";
+                                 }
+                                 else 
+                                 {
+                                     x = "Você pressionou CANCELAR!";
+                                 }
+                                    document.getElementById("demo4").innerHTML = x;
+                             }
+                         </script>
+
+                         <h6> Quadro º2 - SEMI-FINAL</h6>
+
+                         <button onclick="quadro2()">Clique para ver o º2 Quadro</button>
+                            <p id="demoQuadro2"></p>
+            
+                        <script>
+                             function quadro2()
+                             {
+                                var dupla2 = "INGLATERRA x ESPANHA";
+                                document.getElementById("demoQuadro2").innerHTML = dupla2;
+                             }
+                        </script>
+                            <button onclick="final2()">Clique para ver o finalista</button>
+                                <p id="demofinal2"></p>
+
+                        <script>
+                            function final2()
+                            {
+                              var passa = "Espanha vence a Inglaterra nos penaltis por 4x3 e é classificada para a final.";
+                              document.getElementById("demofinal2").innerHTML = passa;
+                            }
+                      </script>
+
+                       <h6> FINAL 🏆 </h6>
+
+                       <button onclick="finaldacopa()">Clique para ver a final da Copa do Mundo</button>
+                            <p id="finalcopademo"></p>
+            
+                        <script>
+                            function finaldacopa() 
+                            {
+                                var f = "FRANÇA x ESPANHA";
+                                document.getElementById("finalcopademo").innerHTML = f;
+                            }
+                        </script>
+                        
+                        <button onclick="campeao()">Clique para ver o campeão da copa</button>
+                            <p id="democampeao"></p>
+                            <p id="franca"></p>
+
+                            <script>
+                                function campeao()
+                                {
+                                    var campeaodacopa = "Uma final eletrizante, diversas chances de gol para os dois lados. França começou o primeiro tempo com %80 das chances de gol e os torcedores foram a loucura pela partida acirrada, onde nenhum dos dois Países fizeram gol (0x0 1ºtempo). No segundo tempo o jogo ficou ainda mais uma mistura de: frénetico com tenso onde as duas seleções davam tudo de si. O jogo terminou com 1x0 para a França! França campeã da Copa do Mundo.";
+                                    document.getElementById("democampeao").innerHTML = campeaodacopa;   
+          
+                                    var frança = "🏆";
+                                    document.getElementById("franca").innerHTML = frança;
+                                }
+
+                            </script>
+
+
+
+                              
